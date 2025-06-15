@@ -1,36 +1,54 @@
-import * as React from "react"
-import { cva, type VariantProps } from "class-variance-authority"
+"use client"
 
-import { cn } from "@/lib/utils"
+import React from 'react'
+import { Chip, ChipProps } from '@mui/material'
+import { styled } from '@mui/material/styles'
 
-const badgeVariants = cva(
-  "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
-  {
-    variants: {
-      variant: {
+const StyledChip = styled(Chip)(({ theme }) => ({
+  borderRadius: theme.spacing(3),
+  fontSize: '0.75rem',
+  fontWeight: 600,
+  height: 'auto',
+  padding: theme.spacing(0.5, 1),
+}))
+
+export interface BadgeProps extends Omit<ChipProps, 'variant'> {
+  variant?: 'default' | 'secondary' | 'destructive' | 'outline'
+}
+
+const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
+  ({ variant = 'default', ...props }, ref) => {
+    const getMuiVariant = () => {
+      switch (variant) {
+        case 'outline':
+          return 'outlined'
         default:
-          "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
-        secondary:
-          "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        destructive:
-          "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
-        outline: "text-foreground",
-      },
-    },
-    defaultVariants: {
-      variant: "default",
-    },
+          return 'filled'
+      }
+    }
+
+    const getMuiColor = () => {
+      switch (variant) {
+        case 'destructive':
+          return 'error'
+        case 'secondary':
+          return 'secondary'
+        default:
+          return 'primary'
+      }
+    }
+
+    return (
+      <StyledChip
+        ref={ref}
+        variant={getMuiVariant()}
+        color={getMuiColor()}
+        {...props}
+      />
+    )
   }
 )
 
-export interface BadgeProps
-  extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof badgeVariants> {}
+Badge.displayName = 'Badge'
 
-function Badge({ className, variant, ...props }: BadgeProps) {
-  return (
-    <div className={cn(badgeVariants({ variant }), className)} {...props} />
-  )
-}
-
-export { Badge, badgeVariants }
+export { Badge }

@@ -1,79 +1,71 @@
-import * as React from "react"
+"use client"
 
-import { cn } from "@/lib/utils"
+import React from 'react'
+import { Card as MuiCard, CardContent as MuiCardContent, CardHeader as MuiCardHeader, CardActions } from '@mui/material'
+import { styled } from '@mui/material/styles'
 
-const Card = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn(
-      "rounded-lg border bg-card text-card-foreground shadow-sm",
-      className
-    )}
-    {...props}
-  />
-))
-Card.displayName = "Card"
+const StyledCard = styled(MuiCard)(({ theme }) => ({
+  borderRadius: theme.spacing(1),
+  boxShadow: '0 0 0 1px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.12)',
+  '&:hover': {
+    boxShadow: '0 0 0 1px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.16)',
+    transition: 'box-shadow 0.2s ease',
+  },
+}))
 
-const CardHeader = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-6", className)}
-    {...props}
-  />
-))
-CardHeader.displayName = "CardHeader"
+const Card = React.forwardRef<HTMLDivElement, React.ComponentProps<typeof MuiCard>>(
+  ({ children, ...props }, ref) => (
+    <StyledCard ref={ref} {...props}>
+      {children}
+    </StyledCard>
+  )
+)
 
-const CardTitle = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn(
-      "text-2xl font-semibold leading-none tracking-tight",
-      className
-    )}
-    {...props}
-  />
-))
-CardTitle.displayName = "CardTitle"
+const CardHeader = React.forwardRef<HTMLDivElement, React.ComponentProps<typeof MuiCardHeader>>(
+  ({ children, ...props }, ref) => (
+    <MuiCardHeader ref={ref} {...props}>
+      {children}
+    </MuiCardHeader>
+  )
+)
 
-const CardDescription = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
-    {...props}
-  />
-))
-CardDescription.displayName = "CardDescription"
+const CardTitle = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ children, ...props }, ref) => (
+    <div ref={ref} {...props} style={{ fontSize: '1.25rem', fontWeight: 600, lineHeight: 1.2 }}>
+      {children}
+    </div>
+  )
+)
 
-const CardContent = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
-))
-CardContent.displayName = "CardContent"
+const CardDescription = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ children, ...props }, ref) => (
+    <div ref={ref} {...props} style={{ fontSize: '0.875rem', color: 'text.secondary' }}>
+      {children}
+    </div>
+  )
+)
 
-const CardFooter = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn("flex items-center p-6 pt-0", className)}
-    {...props}
-  />
-))
-CardFooter.displayName = "CardFooter"
+const CardContent = React.forwardRef<HTMLDivElement, React.ComponentProps<typeof MuiCardContent>>(
+  ({ children, ...props }, ref) => (
+    <MuiCardContent ref={ref} {...props}>
+      {children}
+    </MuiCardContent>
+  )
+)
+
+const CardFooter = React.forwardRef<HTMLDivElement, React.ComponentProps<typeof CardActions>>(
+  ({ children, ...props }, ref) => (
+    <CardActions ref={ref} {...props}>
+      {children}
+    </CardActions>
+  )
+)
+
+Card.displayName = 'Card'
+CardHeader.displayName = 'CardHeader'
+CardTitle.displayName = 'CardTitle'
+CardDescription.displayName = 'CardDescription'
+CardContent.displayName = 'CardContent'
+CardFooter.displayName = 'CardFooter'
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
