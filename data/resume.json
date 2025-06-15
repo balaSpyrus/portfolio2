@@ -1,0 +1,270 @@
+{
+  "personalInfo": {
+    "name": "Balasubramanian Nagarajan",
+    "title": "Senior Software Engineer",
+    "photo": "",
+    "location": {
+      "city": "Bengaluru",
+      "country": "IN",
+      "postalCode": "562125"
+    },
+    "contact": {
+      "phone": "+91 9487680919",
+      "email": "bbalax.bbalax@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/bala-fe/",
+      "website": "https://balaspyrus.github.io/portfolio/",
+      "github": ""
+    },
+    "summary": "Highly experienced Software Engineer with 8.7 years of expertise in front-end development, specializing in React, TypeScript, JavaScript, Redux, and React-Query, complemented by proficiency in Java for backend contributions. Proven leader in spearheading complex enterprise and fintech solutions, driving revenue growth, optimizing workflows, and significantly enhancing user experience across diverse platforms. Skilled in fostering cross-functional collaboration, proactively resolving critical issues, and dedicated to mentoring junior developers for continuous improvement."
+  },
+  "technicalSkills": {
+    "categories": [
+      {
+        "name": "Frontend Technologies",
+        "skills": [
+          { "name": "React JS", "proficiency": "Expert", "rating": 5, "years": 8 },
+          { "name": "JavaScript", "proficiency": "Advanced", "rating": 4, "years": 8 },
+          { "name": "TypeScript", "proficiency": "Advanced", "rating": 4, "years": 6 },
+          { "name": "HTML", "proficiency": "Advanced", "rating": 4, "years": 8 },
+          { "name": "CSS", "proficiency": "Advanced", "rating": 4, "years": 8 },
+          { "name": "Material-UI", "proficiency": "Advanced", "rating": 4, "years": 5 },
+          { "name": "React-Query", "proficiency": "Intermediate", "rating": 3, "years": 3 },
+          { "name": "Redux", "proficiency": "Intermediate", "rating": 3, "years": 6 },
+          { "name": "Redux-Saga", "proficiency": "Intermediate", "rating": 3, "years": 4 }
+        ]
+      },
+      {
+        "name": "Backend & Databases",
+        "skills": [
+          { "name": "Java", "proficiency": "Beginner", "rating": 2, "years": 4 },
+          { "name": "Node.js", "proficiency": "Intermediate", "rating": 3, "years": 3 },
+          { "name": "MongoDB", "proficiency": "Beginner", "rating": 2, "years": 3 }
+        ]
+      },
+      {
+        "name": "Mobile & Tools",
+        "skills": [
+          { "name": "React Native", "proficiency": "Beginner", "rating": 2, "years": 2 },
+          { "name": "Docker", "proficiency": "Beginner", "rating": 1, "years": 3 }
+        ]
+      },
+      {
+        "name": "Other Technologies",
+        "skills": [
+          { "name": "Git", "proficiency": "Advanced", "rating": 4, "years": 8 },
+          { "name": "RESTful APIs", "proficiency": "Advanced", "rating": 4, "years": 6 },
+          { "name": "Micro-frontend Architecture", "proficiency": "Advanced", "rating": 4, "years": 3 },
+          { "name": "PWA Development", "proficiency": "Advanced", "rating": 4, "years": 4 },
+          { "name": "Firebase", "proficiency": "Intermediate", "rating": 3, "years": 3 },
+          { "name": "Framer Motion", "proficiency": "Intermediate", "rating": 3, "years": 2 },
+          { "name": "WebSockets", "proficiency": "Intermediate", "rating": 3, "years": 2 }
+        ]
+      }
+    ]
+  },
+  "accomplishments": [
+    {
+      "title": "Revenue Generation",
+      "description": "Generated $6M+ in revenue by developing Fresh-survey platform, reducing third-party tool reliance"
+    },
+    {
+      "title": "Bug Resolution Excellence",
+      "description": "Resolved 200+ critical bugs, significantly enhancing system stability and user satisfaction"
+    },
+    {
+      "title": "Multi-Market Deployment",
+      "description": "Successfully deployed License & Permits Manager features to 14 markets under tight deadlines"
+    },
+    {
+      "title": "PWA Innovation",
+      "description": "Initiated and developed PWA concepts, enhancing user experience and expanding mobile reach"
+    },
+    {
+      "title": "Team Leadership",
+      "description": "Led vendor teams, elevating app standards, improving performance, code quality, and user satisfaction"
+    },
+    {
+      "title": "Mentorship Impact",
+      "description": "Actively mentored junior developers, fostering continuous improvement and best practices"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "name": "Personal Portfolio",
+      "description": "A responsive portfolio website showcasing my work and skills with smooth animations and modern design.",
+      "technologies": ["React", "Firebase", "Material-UI", "Framer Motion"],
+      "url": "https://balaspyrus.github.io/portfolio/",
+      "type": "Personal",
+      "status": "Live"
+    },
+    {
+      "id": "2",
+      "name": "Mock Trello",
+      "description": "A comprehensive task management application with drag-and-drop functionality, real-time updates, and collaborative features.",
+      "technologies": ["React", "React DnD", "Framer Motion", "Firebase"],
+      "url": "https://mock-trello-2-0.onrender.com/",
+      "type": "Personal",
+      "status": "Live"
+    },
+    {
+      "id": "3",
+      "name": "Pictionary Game",
+      "description": "An interactive multiplayer pictionary game with real-time drawing, chat functionality, and room management.",
+      "technologies": ["React", "WebSockets", "Node.js"],
+      "url": "https://pictionary.url4u.in/",
+      "type": "Personal",
+      "status": "Live"
+    }
+  ],
+  "certifications": [
+    {
+      "id": "1",
+      "name": "MERN Stack Certification",
+      "issuer": "StackRoute",
+      "date": "2018",
+      "description": "Comprehensive certification covering MongoDB, Express.js, React.js, and Node.js development"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "proficiency": "Fluent"
+    },
+    {
+      "name": "Tamil",
+      "proficiency": "Native"
+    }
+  ],
+  "awards": [
+    {
+      "id": "1",
+      "title": "Bravo Award",
+      "organization": "Walmart Global Tech India",
+      "year": "2020-2023",
+      "description": "Recognition for outstanding performance and contributions during first tenure at Walmart"
+    },
+    {
+      "id": "2",
+      "title": "ACMICPC 18th Rank",
+      "organization": "ACM International Collegiate Programming Contest",
+      "year": "2015",
+      "description": "Achieved 18th rank in team coding competition demonstrating strong algorithmic and problem-solving skills"
+    },
+    {
+      "id": "3",
+      "title": "Microsoft Student Associate",
+      "organization": "Microsoft",
+      "year": "2013-2014",
+      "description": "Selected as Microsoft Student Associate, promoting Microsoft technologies and organizing tech events"
+    }
+  ],
+  "workExperience": [
+    {
+      "id": "1",
+      "position": "Senior Software Engineer",
+      "company": "Walmart Global Tech India",
+      "location": "Bengaluru, India",
+      "startDate": "January 2025",
+      "endDate": "Present",
+      "current": true,
+      "achievements": [
+        "Spearheading front-end development for Finance Resolve Hub (FRH), a new fintech product aimed at streamlining seller dispute resolution, reducing processing times, and driving revenue through efficiency.",
+        "Driving core front-end implementation (70%) using React, Redux, TypeScript, JavaScript, and React-Query to build intuitive user interfaces.",
+        "Contributing to backend development (20%) leveraging Java to support application functionality.",
+        "Collaborating on architectural decisions, design discussions, and code reviews with Staff Engineers and product teams, also mentoring junior developers."
+      ]
+    },
+    {
+      "id": "2",
+      "position": "Senior Software Engineer II",
+      "company": "Talentship",
+      "location": "Chennai",
+      "startDate": "December 2024",
+      "endDate": "January 2025",
+      "current": false,
+      "achievements": []
+    },
+    {
+      "id": "3",
+      "position": "Lead Software Engineer - Frontend",
+      "company": "Freshworks",
+      "location": "Chennai, India",
+      "startDate": "August 2023",
+      "endDate": "November 2024",
+      "current": false,
+      "achievements": [
+        "Spearheaded front-end development of the Fresh-survey platform (a micro-frontend) integrated across Fresh-desk, Fresh-chat, and Fresh-service, generating $6M+ in revenue by reducing third-party tool reliance.",
+        "Collaborated with UX designers and product managers to define requirements and ensure a seamless user experience.",
+        "Resolved 200+ critical bugs, enhancing stability and user satisfaction across multiple products.",
+        "Proposed and implemented strategic product enhancements to align with roadmap goals and boost customer engagement.",
+        "Facilitated a collaborative team culture through technical problem-solving guidance and best practice sharing."
+      ]
+    },
+    {
+      "id": "4",
+      "position": "Software Engineer - III",
+      "company": "Walmart Global Tech India",
+      "location": "Bangalore, India",
+      "startDate": "June 2020",
+      "endDate": "August 2023",
+      "current": false,
+      "achievements": [
+        "Led front-end development of the License & Permits Manager, deploying features to 14 markets under tight deadlines.",
+        "Developed a PWA concept to enhance mobile usability and cross-platform development efficiency.",
+        "Built user-friendly interfaces for license procurement/renewal using React, JS, TS, Material-UI, and Redux.",
+        "Ensured high code quality through code reviews and design collaboration.",
+        "Mentored junior developers, fostering continuous improvement."
+      ]
+    },
+    {
+      "id": "5",
+      "position": "Senior Software Engineer",
+      "company": "Aziro Technologies (formerly MSys Technologies)",
+      "location": "Chennai, India",
+      "startDate": "May 2018",
+      "endDate": "May 2020",
+      "current": false,
+      "achievements": [
+        "Led vendor team, elevating app standards, improving performance, code quality, and user satisfaction.",
+        "Presented regular POCs (Proofs of Concept) for continuous feature improvements.",
+        "Successfully delivered applications, exceeding project goals within tight timelines."
+      ]
+    },
+    {
+      "id": "6",
+      "position": "Project Engineer",
+      "company": "WIPRO technologies",
+      "location": "Chennai, India",
+      "startDate": "June 2016",
+      "endDate": "May 2018",
+      "current": false,
+      "achievements": [
+        "Initiated PWA concept, enhancing user experience and expanding mobile reach.",
+        "Led the development of an Android scanner application for warehouse optimization, effectively streamlining workflows for a major retail client.",
+        "Modernized legacy Oracle forms using React, Spring Boot, and Oracle SQL, significantly enhancing interface usability and performance.",
+        "Consistently met and exceeded client expectations in project delivery by adhering to tight deadlines."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "1",
+      "degree": "Bachelor of Engineering (B.E)",
+      "field": "Computer Science and Engineering",
+      "institution": "Karpagam College Of Engineering",
+      "location": "Coimbatore",
+      "startDate": "August 2012",
+      "endDate": "April 2016",
+      "gpa": "7.87",
+      "achievements": [
+        "Graduated with a 7.87 GPA.",
+        "Elected Treasurer of the Computer Science and Engineering Department (2015).",
+        "Participated in the Microsoft Student Training Club and served as a Microsoft Student Associate (MSA) for 2013-2014.",
+        "Member of the Logical & Aptitude Training Club.",
+        "Designed certificates, ID cards, and banners for the CS & IT Department."
+      ]
+    }
+  ],
+  "interests": []
+}

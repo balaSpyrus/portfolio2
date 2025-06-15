@@ -1,0 +1,359 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* LinkedIn Color Palette - Light Mode - Pure Colors Only */
+    --background: 255 255 255;
+    --foreground: 33 33 33;
+    --card: 255 255 255;
+    --card-foreground: 33 33 33;
+    --popover: 255 255 255;
+    --popover-foreground: 33 33 33;
+    --primary: 10 102 194;
+    --primary-foreground: 255 255 255;
+    --secondary: 245 245 245;
+    --secondary-foreground: 86 86 86;
+    --muted: 248 248 248;
+    --muted-foreground: 102 102 102;
+    --accent: 240 248 255;
+    --accent-foreground: 10 102 194;
+    --destructive: 204 43 43;
+    --destructive-foreground: 255 255 255;
+    --border: 218 218 218;
+    --input: 218 218 218;
+    --ring: 10 102 194;
+    --radius: 0.5rem;
+
+    /* LinkedIn specific colors - Pure blues and grays only */
+    --linkedin-blue: 10 102 194;
+    --linkedin-blue-hover: 0 77 181;
+    --linkedin-blue-light: 240 248 255;
+    --linkedin-gray-50: 252 252 252;
+    --linkedin-gray-100: 248 248 248;
+    --linkedin-gray-200: 229 231 235;
+    --linkedin-gray-300: 209 213 219;
+    --linkedin-gray-400: 156 163 175;
+    --linkedin-gray-500: 107 114 128;
+    --linkedin-gray-600: 75 85 99;
+    --linkedin-gray-700: 55 65 81;
+    --linkedin-gray-800: 31 41 55;
+    --linkedin-gray-900: 17 24 39;
+    --linkedin-success: 22 163 74;
+    --linkedin-error: 204 43 43;
+  }
+
+  .dark {
+    /* LinkedIn Color Palette - Dark Mode - Pure grays and blues */
+    --background: 15 15 15;
+    --foreground: 255 255 255;
+    --card: 25 25 25;
+    --card-foreground: 255 255 255;
+    --popover: 25 25 25;
+    --popover-foreground: 255 255 255;
+    --primary: 112 181 249;
+    --primary-foreground: 15 15 15;
+    --secondary: 38 38 38;
+    --secondary-foreground: 181 181 181;
+    --muted: 38 38 38;
+    --muted-foreground: 153 153 153;
+    --accent: 25 39 52;
+    --accent-foreground: 112 181 249;
+    --destructive: 239 68 68;
+    --destructive-foreground: 15 15 15;
+    --border: 64 64 64;
+    --input: 64 64 64;
+    --ring: 112 181 249;
+
+    /* LinkedIn dark theme colors - Pure grays and blues */
+    --linkedin-blue: 112 181 249;
+    --linkedin-blue-hover: 96 165 250;
+    --linkedin-blue-light: 25 39 52;
+    --linkedin-gray-50: 15 15 15;
+    --linkedin-gray-100: 25 25 25;
+    --linkedin-gray-200: 38 38 38;
+    --linkedin-gray-300: 64 64 64;
+    --linkedin-gray-400: 102 102 102;
+    --linkedin-gray-500: 153 153 153;
+    --linkedin-gray-600: 181 181 181;
+    --linkedin-gray-700: 204 204 204;
+    --linkedin-gray-800: 229 229 229;
+    --linkedin-gray-900: 255 255 255;
+    --linkedin-success: 34 197 94;
+    --linkedin-error: 248 113 113;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* LinkedIn-inspired utility classes - No yellow/warm tints */
+.linkedin-blue {
+  color: rgb(var(--linkedin-blue));
+}
+
+.linkedin-blue-bg {
+  background-color: rgb(var(--linkedin-blue));
+}
+
+.linkedin-blue-light-bg {
+  background-color: rgb(var(--linkedin-blue-light));
+}
+
+.linkedin-card {
+  background: rgb(var(--card));
+  border: 1px solid rgb(var(--linkedin-gray-300));
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+.dark .linkedin-card {
+  border: 1px solid rgb(var(--linkedin-gray-600));
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.linkedin-card:hover {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.16);
+  transition: box-shadow 0.2s ease;
+}
+
+.dark .linkedin-card:hover {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.linkedin-button {
+  background-color: rgb(var(--linkedin-blue));
+  color: white;
+  border: none;
+  border-radius: 24px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.linkedin-button:hover {
+  background-color: rgb(var(--linkedin-blue-hover));
+}
+
+.linkedin-button-outline {
+  background-color: transparent;
+  color: rgb(var(--linkedin-blue));
+  border: 1px solid rgb(var(--linkedin-blue));
+  border-radius: 24px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.linkedin-button-outline:hover {
+  background-color: rgb(var(--linkedin-blue-light));
+}
+
+/* Fixed Navigation hover effects - Readable text in light mode */
+.nav-item-hover:hover {
+  background-color: rgb(var(--linkedin-blue-light));
+  color: rgb(var(--linkedin-blue-hover)) !important;
+}
+
+.dark .nav-item-hover:hover {
+  background-color: rgb(var(--linkedin-gray-200));
+  color: rgb(var(--linkedin-blue)) !important;
+}
+
+/* Fixed Text hover effects - Readable in light mode */
+.text-hover:hover {
+  color: rgb(var(--linkedin-blue-hover)) !important;
+  transition: color 0.2s ease;
+}
+
+.dark .text-hover:hover {
+  color: rgb(var(--linkedin-blue)) !important;
+}
+
+/* Link hover effects - Readable in both modes */
+.link-hover:hover {
+  color: rgb(var(--linkedin-blue-hover)) !important;
+  text-decoration: underline;
+  transition: all 0.2s ease;
+}
+
+.dark .link-hover:hover {
+  color: rgb(var(--linkedin-blue)) !important;
+}
+
+/* LinkedIn-style gradients - Pure blue */
+.linkedin-gradient {
+  background: linear-gradient(135deg, rgb(var(--linkedin-blue)) 0%, rgb(var(--linkedin-blue-hover)) 100%);
+}
+
+.linkedin-text-gradient {
+  background: linear-gradient(135deg, rgb(var(--linkedin-blue)) 0%, rgb(var(--linkedin-blue-hover)) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Page transition effects */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Section transition effects */
+.section-transition {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-enter {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.section-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.section-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.section-exit-active {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+/* Consistent gray colors - No warm tints */
+.text-gray-50 {
+  color: rgb(var(--linkedin-gray-50));
+}
+.text-gray-100 {
+  color: rgb(var(--linkedin-gray-100));
+}
+.text-gray-200 {
+  color: rgb(var(--linkedin-gray-200));
+}
+.text-gray-300 {
+  color: rgb(var(--linkedin-gray-300));
+}
+.text-gray-400 {
+  color: rgb(var(--linkedin-gray-400));
+}
+.text-gray-500 {
+  color: rgb(var(--linkedin-gray-500));
+}
+.text-gray-600 {
+  color: rgb(var(--linkedin-gray-600));
+}
+.text-gray-700 {
+  color: rgb(var(--linkedin-gray-700));
+}
+.text-gray-800 {
+  color: rgb(var(--linkedin-gray-800));
+}
+.text-gray-900 {
+  color: rgb(var(--linkedin-gray-900));
+}
+
+.bg-gray-50 {
+  background-color: rgb(var(--linkedin-gray-50));
+}
+.bg-gray-100 {
+  background-color: rgb(var(--linkedin-gray-100));
+}
+.bg-gray-200 {
+  background-color: rgb(var(--linkedin-gray-200));
+}
+.bg-gray-300 {
+  background-color: rgb(var(--linkedin-gray-300));
+}
+.bg-gray-400 {
+  background-color: rgb(var(--linkedin-gray-400));
+}
+.bg-gray-500 {
+  background-color: rgb(var(--linkedin-gray-500));
+}
+.bg-gray-600 {
+  background-color: rgb(var(--linkedin-gray-600));
+}
+.bg-gray-700 {
+  background-color: rgb(var(--linkedin-gray-700));
+}
+.bg-gray-800 {
+  background-color: rgb(var(--linkedin-gray-800));
+}
+.bg-gray-900 {
+  background-color: rgb(var(--linkedin-gray-900));
+}
+
+.border-gray-200 {
+  border-color: rgb(var(--linkedin-gray-200));
+}
+.border-gray-300 {
+  border-color: rgb(var(--linkedin-gray-300));
+}
+.border-gray-400 {
+  border-color: rgb(var(--linkedin-gray-400));
+}
+.border-gray-500 {
+  border-color: rgb(var(--linkedin-gray-500));
+}
+.border-gray-600 {
+  border-color: rgb(var(--linkedin-gray-600));
+}
+.border-gray-700 {
+  border-color: rgb(var(--linkedin-gray-700));
+}
+
+/* Skills section accent colors - Pure colors only */
+.skills-accent {
+  color: rgb(var(--linkedin-blue));
+}
+.experience-accent {
+  color: rgb(22 163 74);
+}
+.projects-accent {
+  color: rgb(var(--linkedin-blue));
+}
+
+/* Material-UI integration */
+.MuiPaper-root {
+  background-color: rgb(var(--card)) !important;
+  color: rgb(var(--card-foreground)) !important;
+}
+
+.MuiButton-root {
+  text-transform: none !important;
+}
+
+.MuiButton-containedPrimary {
+  background-color: rgb(var(--linkedin-blue)) !important;
+  color: white !important;
+}
+
+.MuiButton-containedPrimary:hover {
+  background-color: rgb(var(--linkedin-blue-hover)) !important;
+}
